@@ -1,0 +1,15 @@
+<%= form_for(@line) do |form| %>
+	
+	<div>
+	<%= form.label :name, "Name of this line" %>
+	<%= form.text_field :name %>
+	</div>
+	
+	<div>
+	<%= form.label :frequency, "Frequency of this line" %>
+	<%= form.text_field :frequency %>
+	</div>
+	
+	<%= form. submit %>
+	
+<% end %>

@@ -1,0 +1,15 @@
+<h1>The Metro Lines</h1>
+
+<ul>
+<% @lines.each do |line| %>
+	<li>
+		<a href="<%= metro_line_url(line.id) %>">
+			<%= line.name %> 
+		</a>
+		| <%= link_to "Edit", edit_metro_line_url(line.id) %>
+		| <%= link_to "Delete", metro_line_url(line.id), 
+			  :method => :delete, :confirm => "REALLY?" %>
+	</li>
+<% end %>
+</ul>
+<%= link_to "Add a new line", new_metro_line_url %>
